@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.19.1, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.19.6.0\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -52,8 +55,51 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormInsertClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInsertClient.Designer.cs">
+      <DependentUpon>FormInsertClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInsertOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInsertOrder.Designer.cs">
+      <DependentUpon>FormInsertOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInsertProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInsertProduct.Designer.cs">
+      <DependentUpon>FormInsertProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInsertProductStorage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInsertProductStorage.Designer.cs">
+      <DependentUpon>FormInsertProductStorage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Client.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\ProductStorage.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInsertClient.resx">
+      <DependentUpon>FormInsertClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInsertOrder.resx">
+      <DependentUpon>FormInsertOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInsertProduct.resx">
+      <DependentUpon>FormInsertProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInsertProductStorage.resx">
+      <DependentUpon>FormInsertProductStorage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -63,6 +109,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -76,5 +123,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
